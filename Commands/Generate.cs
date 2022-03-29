@@ -5,7 +5,7 @@ using Logic;
 
 
 [Command("gen")]
-public class MainCommand : ICommand{
+public class Generate : ICommand{
     [CommandParameter(0, Description = "Name of template to generate from.")]
     public string Template { get; init; }="";
     [CommandParameter(1, Description = "Name of template data file.")]
