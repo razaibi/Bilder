@@ -1,0 +1,5 @@
+---
+ classname: "Sample"
+ properties:
+  - name: "age"
+    type: "Int32"
