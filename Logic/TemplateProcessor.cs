@@ -10,6 +10,11 @@ public class TemplateProcessor{
         string templateName,
         string templateDataFile
     ){
+        var currentProject = ConfigManager
+            .GetAppSettingByKey(
+            "currentProject"
+        );
+
         var templateDataPath = Path.Join(
             "Data", 
             templateDataFile
