@@ -1,10 +1,13 @@
 ﻿using CliFx;
+using Logic;
 
-public static class Program{
-    public static async Task<int> Main() =>
-        await new CliApplicationBuilder()
-            .AddCommandsFromThisAssembly()
-            .Build()
-            .RunAsync();
-
+public class Program{
+    static async Task Main(string[] args){   
+        if (await Initialization.ReadyToRun() == true){
+            await new CliApplicationBuilder()
+                .AddCommandsFromThisAssembly()
+                .Build()
+                .RunAsync();
+        };
+    }
 }
